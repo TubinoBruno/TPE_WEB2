@@ -1,0 +1,30 @@
+
+#TextoBotonera, #pie {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: rgb(255, 130, 140);
+}
+#logo_esquina {
+  float: none;
+  width: 200px;
+  height: 70px;
+}
+#mainNav, #footer {
+  background-color: rgb(42, 39, 55);
+}
+#pie {
+  background-color: rgb(12, 39, 55);
+  margin: 0px;
+  padding: 10px;
+  text-align: center;
+}
+#navbar_title, #icon_navbar {
+  color: rgb(230, 195, 195);
+}
+.alineacion {
+  align-content: center;
+}
+#logoSB {
+  text-align: center;
+  background-color: inherit;
+  }
