@@ -5,7 +5,7 @@
       <h2>{$Titulo}</h2>
       <form method="post" action="verificarLogin">
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
+          <label for="exampleInputUsuario1">Usuario</label>
           <input type="input" class="form-control" id="usuarioId" name="usuarioId" aria-describedby="usuarioId" placeholder="Enter email">
         </div>
         <div class="form-group">
