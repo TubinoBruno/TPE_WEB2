@@ -3,6 +3,7 @@ define('HOME', 'Location: http://'.$_SERVER['SERVER_NAME']  .':'. $_SERVER['SERV
 define('LOGIN', 'Location: http://'.$_SERVER['SERVER_NAME']  .':'. $_SERVER['SERVER_PORT']. dirname($_SERVER['PHP_SELF']).'/login');
 define('LOGOUT', 'Location: http://'.$_SERVER['SERVER_NAME']  .':'. $_SERVER['SERVER_PORT']. dirname($_SERVER['PHP_SELF']).'/logout');
 define('SIGNUP', 'Location: http://'.$_SERVER['SERVER_NAME']  .':'. $_SERVER['SERVER_PORT']. dirname($_SERVER['PHP_SELF']).'/signup');
+define('NOTICIAS', 'Location: http://'.$_SERVER['SERVER_NAME']  .':'. $_SERVER['SERVER_PORT']. dirname($_SERVER['PHP_SELF']).'/noticias');
 
 class ConfigApp
 {
@@ -31,6 +32,11 @@ class ConfigApp
     'verificarLogin'=>'LoginController#verificarLogin',
 
     'home'=>'PublicController#MostrarNovedades',
+    'bandasV'=>'PublicController#MostrarBandas',
+    'mostrarBanda'=>'PublicController#MostrarBanda',
+    'verNoticia'=>'PublicController#MostrarBanda',
+    'filtrar'=>'PublicController#filtrarNoticia',
+
 
   ];
 }

@@ -5,7 +5,7 @@
     <div class="container"><br>
       <h2>EDITAR NOTICIA</h2>
 
-      <form method="post" action="../renovar">
+      <form method="post" action="renovar">
         <div class="form-group">
           <label for="tituloForm">Nombre de la Noticia</label>
           <input type="text" class="form-control" id="tituloForm" name="tituloForm" placeholder="{$Noticias['titulo']}">

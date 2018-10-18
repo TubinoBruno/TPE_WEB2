@@ -21,7 +21,7 @@ require_once  "./model/UsuarioModel.php";
       session_destroy();
       header(LOGIN);
     }
-    
+
     function verificarLogin(){
       $usuario = $_POST["usuarioId"];
       $password = $_POST["passwordId"];
@@ -30,7 +30,7 @@ require_once  "./model/UsuarioModel.php";
         if(password_verify($password,$usuario_db[0]["clave"])){
           session_start();
           $_SESSION["usuario"]=$usuario;
-          header(HOME);
+          header(NOTICIAS);
 
         }
         else {

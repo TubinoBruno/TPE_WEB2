@@ -38,7 +38,6 @@ class BandasModel {
   }
   function actualizarBanda($idBanda,$nombre,$estilo){
     $sentencia = $this->db->prepare("UPDATE `banda` SET `id_banda`=?,`nombre`=?,`estilo`=? WHERE  `id_banda`");
-    //$sentencia = $this->db->prepare("update  banda set 'nombre' = ". $nombre . ", 'estilo' =". $estilo . "WHERE 'id_banda'=$idBanda");
 
      $sentencia->execute([$idBanda,$nombre,$estilo]);
 

@@ -3,7 +3,7 @@
 <div class="container"><br>
   <h2>EDITAR BANDA</h2>
 
-  <form method="post" action="../actualizar" >
+  <form method="post" action="actualizar" >
     <div class="form-group">
       <label for="tituloForm">Nombre de la banda</label>
       <input type="text" class="form-control" id="nombreForm" name="nombreForm"  placeholder="{$Banda['nombre']}">

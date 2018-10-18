@@ -21,7 +21,7 @@
   <ul class="list-group">
     {foreach from=$Bandas item= banda}
         <li class="list-group-item"><p>NOMBRE:<a href="mostrar_banda/{$banda['id_banda']}">{$banda['nombre']}</a><p>
-          ESTILO:{$banda['estilo']}<a href="eliminar/{$banda['id_banda']}">>ELIMINAR</a>
+          ESTILO:{$banda['estilo']}<a href="eliminar/{$banda['id_banda']}"><p>eliminar</a>
           <a href="editar/{$banda['id_banda']}">editar</a></li>
     {/foreach}
   </ul>

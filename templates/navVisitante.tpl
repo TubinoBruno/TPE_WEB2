@@ -10,19 +10,16 @@
 <div class="alineacion collapse navbar-collapse " id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
 
-    <li class="nav-item">
-      <a id="TextoBotonera" class="nav-link" href="/Web2/TPE_WEB2/noticias">NOTICIA</a>
-    </li>
 
     <li class="nav-item">
-      <a id="TextoBotonera" class="nav-link disabled" href="/Web2/TPE_WEB2/bandas">BANDAS</a>
+      <a id="TextoBotonera" class="nav-link disabled" href="/Web2/TPE_WEB2/home">NOVEDADES</a>
     </li>
     <li class="nav-item">
-      <a id="TextoBotonera" class="nav-link disabled" href="/Web2/TPE_WEB2/logout">LOGOUT</a>
+      <a id="TextoBotonera" class="nav-link disabled" href="/Web2/TPE_WEB2/bandasV">BANDAS</a>
     </li>
-
-
-
+    <li class="nav-item">
+      <a id="TextoBotonera" class="nav-link disabled" href="/Web2/TPE_WEB2/login">LOGIN</a>
+    </li>
 
 
 

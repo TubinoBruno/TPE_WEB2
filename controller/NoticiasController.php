@@ -45,12 +45,12 @@ class NoticiasController extends SecuredController
     $descripcion = $_POST["descripcionForm"];
     $banda = $_POST["bandasForm"];
     $this->model->InsertNoticia($banda,$titulo,$descripcion);
-    header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
+    header(NOTICIAS);
   }
 
   function BorrarNoticia($params){
     $this->model->BorrarNoticia($params[0]);
-    header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
+    header(NOTICIAS);
   }
 function renovarNoticia(){
   $titulo = $_POST["tituloForm"];
@@ -59,7 +59,7 @@ function renovarNoticia(){
   $id_banda = $_POST["id_bandaForm"];
 
   $this->model->EditarNoticia($id_noticia,$id_banda,$titulo,$descripcion);
-  header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
+  header(NOTICIAS);
 
 }
 

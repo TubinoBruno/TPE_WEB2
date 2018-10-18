@@ -17,7 +17,7 @@ class BandasView extends View
   }
   function MostrarBanda( $Banda){
     $this->smarty->assign('Banda',$Banda[0]);
-
+    json_encode($Banda[0]);
     $this->smarty->display('templates/mostrarbanda.tpl');
 
   }
