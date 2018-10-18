@@ -45,7 +45,7 @@ function InsertNoticia($banda,$titulo,$descripcion){
 
 function BorrarNoticia($idNoticia){
   $sentencia = $this->db->prepare("delete from noticias where id_noticia=?");
-  $sentencia->execute(array($idNoticia)); //atento con la A
+  $sentencia->execute(array($idNoticia));
 }
 function EditarNoticia($id_noticia,$id_banda,$titulo,$descripcion){
 
