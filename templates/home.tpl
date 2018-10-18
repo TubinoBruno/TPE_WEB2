@@ -9,15 +9,17 @@
         {foreach from=$Noticias item= noticia}
 
             <li class="list-group-item"><p><b>NOMBRE:</b><a  href="verNoticia/{$noticia['id_noticia']}">{$noticia['titulo']}</a><p>
-              <b>DESCRIPCIÓN:</b>{$noticia['descripcion']}<p>
-                <p><b>BANDA:</b>  <a  href="mostrarNoticia/{$noticia['id_banda']}">{$noticia['nombre']}</a><p>
+
+                <p><b>BANDA:</b>  <a  href="mostrarBanda/{$noticia['id_banda']}">{$noticia['nombre']}</a><p>
 
 
         {/foreach}
       </ul>
     </div>
+    <div class="container">
+      <h1>Seleccionar noticias de banda</h1>
+
     <form method="post" action="filtrar">
-      <div class="container">
 
     <select type="text" class="form-control" id="bandasForm" name="bandasForm">
       {foreach from=$Banda item= bandas}

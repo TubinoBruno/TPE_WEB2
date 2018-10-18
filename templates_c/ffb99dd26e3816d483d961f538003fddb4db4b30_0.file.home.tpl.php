@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-18 05:26:31
+/* Smarty version 3.1.33, created on 2018-10-18 15:28:55
   from '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc7fd67a93c01_07087014',
+  'unifunc' => 'content_5bc88a97a5b208_71753975',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ffb99dd26e3816d483d961f538003fddb4db4b30' => 
     array (
       0 => '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/home.tpl',
-      1 => 1539832717,
+      1 => 1539869331,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc7fd67a93c01_07087014 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc88a97a5b208_71753975 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:navVisitante.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -43,9 +43,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['noticia']->value) {
             <li class="list-group-item"><p><b>NOMBRE:</b><a  href="verNoticia/<?php echo $_smarty_tpl->tpl_vars['noticia']->value['id_noticia'];?>
 "><?php echo $_smarty_tpl->tpl_vars['noticia']->value['titulo'];?>
 </a><p>
-              <b>DESCRIPCIÓN:</b><?php echo $_smarty_tpl->tpl_vars['noticia']->value['descripcion'];?>
-<p>
-                <p><b>BANDA:</b>  <a  href="mostrarNoticia/<?php echo $_smarty_tpl->tpl_vars['noticia']->value['id_banda'];?>
+
+                <p><b>BANDA:</b>  <a  href="mostrarBanda/<?php echo $_smarty_tpl->tpl_vars['noticia']->value['id_banda'];?>
 "><?php echo $_smarty_tpl->tpl_vars['noticia']->value['nombre'];?>
 </a><p>
 
@@ -56,8 +55,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['noticia']->value) {
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       </ul>
     </div>
+    <div class="container">
+      <h1>Seleccionar noticias de banda</h1>
+
     <form method="post" action="filtrar">
-      <div class="container">
 
     <select type="text" class="form-control" id="bandasForm" name="bandasForm">
       <?php

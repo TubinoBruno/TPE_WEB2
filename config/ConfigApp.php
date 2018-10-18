@@ -34,7 +34,7 @@ class ConfigApp
     'home'=>'PublicController#MostrarNovedades',
     'bandasV'=>'PublicController#MostrarBandas',
     'mostrarBanda'=>'PublicController#MostrarBanda',
-    'verNoticia'=>'PublicController#MostrarBanda',
+    'verNoticia'=>'PublicController#MostrarNoticia',
     'filtrar'=>'PublicController#filtrarNoticia',
 
 
