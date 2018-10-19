@@ -2,7 +2,7 @@
 /**
  *
  */
-class NoticiasModel {
+class NoticiasModel  {
   private $db;
 
   function __construct() {
@@ -49,9 +49,8 @@ function BorrarNoticia($idNoticia){
 }
 function EditarNoticia($id_noticia,$id_banda,$titulo,$descripcion){
 
-  $sentencia = $this->db->prepare("UPDATE `noticias` SET `id_noticia`=?,`id_banda`=?,`titulo`=?,`descripcion`=? WHERE `id_noticia`");
-
-  $sentencia->execute([$id_noticia,$id_banda,$titulo,$descripcion]);
+  $sentencia = $this->db->prepare("UPDATE `noticias` SET `id_banda`=?,`titulo`=?,`descripcion`=? WHERE `id_noticia`=?");
+  $sentencia->execute([$id_banda,$titulo,$descripcion, $id_noticia]);
 }
 
 

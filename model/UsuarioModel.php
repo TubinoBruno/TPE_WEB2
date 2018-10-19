@@ -16,7 +16,7 @@ class UsuarioModel {
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
-  
+
   function getUser($usuario){
     $sentencia = $this->db->prepare( "select * from usuario where usuario=?");
     $sentencia->execute(array($usuario));

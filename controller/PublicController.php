@@ -43,7 +43,6 @@ function mostrarNovedades(){
     }
     function filtrarNoticia(){
       $idNoticia =$_POST['bandasForm'];
-      echo json_encode($idNoticia);
       $Noticia = $this->model->GetNoticiasDeBanda($idNoticia);
 
       $this->view->MostrarNoticias( $Noticia);

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-18 01:28:19
+/* Smarty version 3.1.33, created on 2018-10-19 22:11:58
   from '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/nav.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc7c59354a952_69628063',
+  'unifunc' => 'content_5bca3a8e3aa923_18622021',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '384b104e073bb28e32990918cc4cb8cb1db76f31' => 
     array (
       0 => '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/nav.tpl',
-      1 => 1539818866,
+      1 => 1539871204,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bc7c59354a952_69628063 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bca3a8e3aa923_18622021 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav id="mainNav" class="navbar navbar-expand-lg navbar-light ">
   <div class="navbar-brand js-scroll-trigger" href="#page-top">
-    <a id="logoSB" class="navbar-brand js-scroll-trigger" href="#page-top">
+    <a id="logo" class="navbar-brand js-scroll-trigger" href="#page-top">
   <img id="logo_esquina" src="images/images.png" alt="logo">  </a><br></img>
   </div>
 <!--  <a id="navbar_title" class="navbar-brand" href="#">comunicación visual</a> -->

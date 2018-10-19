@@ -34,12 +34,12 @@ class BandasModel {
   function EliminarBanda($idBanda){
     $sentencia = $this->db->prepare("delete from banda where id_banda=?");
 
-    $sentencia->execute([$idBanda]); 
+    $sentencia->execute([$idBanda]);
   }
   function actualizarBanda($idBanda,$nombre,$estilo){
-    $sentencia = $this->db->prepare("UPDATE `banda` SET `id_banda`=?,`nombre`=?,`estilo`=? WHERE  `id_banda`");
+    $sentencia = $this->db->prepare("UPDATE `banda` SET `nombre`=?,`estilo`=? WHERE  `id_banda`=?");
 
-     $sentencia->execute([$idBanda,$nombre,$estilo]);
+     $sentencia->execute([$nombre,$estilo,$idBanda]);
 
   }
 
