@@ -13,15 +13,18 @@ class NovedadesView extends View{
   }
   function MostrarNoticia( $Noticia){
     $this->smarty->assign('Noticia',$Noticia[0]);
+    $this->smarty->assign('Titulo',"Mostrar Noticia" );
     $this->smarty->display('templates/mostrarNoticiaV.tpl');
 
   }
   function MostrarNoticias($Noticia){
     $this->smarty->assign('Noticias',$Noticia);
+    $this->smarty->assign('Titulo',"Noticias Seleccionadas" );
     $this->smarty->display('templates/noticiasSeleccionadasV.tpl');
   }
   function MostrarBanda( $Banda){
     $this->smarty->assign('Banda',$Banda[0]);
+    $this->smarty->assign('Titulo',"Mostrar Banda" );
     $this->smarty->display('templates/mostrarBandaV.tpl');
 
   }
