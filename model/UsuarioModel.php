@@ -18,10 +18,18 @@ class UsuarioModel {
   }
 
   function getUser($usuario){
-    $sentencia = $this->db->prepare( "select * from usuario where usuario=?");
+    $sentencia = $this->db->prepare( "select * from usuario where usuario=? limit 1");
     $sentencia->execute(array($usuario));
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
-}
+  function InsertUsuario($usuario,$clave){
+    $sentencia = $this->db->prepare("INSERT INTO usuario(usuario, clave) VALUES(?,?)");
+    $sentencia->execute(array($usuario,$clave));
 
+  }
+  function DeleteUsuario($usuario){
+    $sentencia = $this->db->prepare("DELETE FROM usuario WHERE id_usuario=?");
+        $sentencia->execute(array($usuario));
+}
+}
  ?>

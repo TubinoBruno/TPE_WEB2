@@ -3,9 +3,7 @@
 
 define('ACTION', 0);
 define('PARAMS', 1);
-// require_once './config/Confi00gApp.php';
-// require_once 'controller/AsignaturasController.php';
-// require_once 'controller/test.php';
+
 include_once './view/View.php';
 //include_once './model/Model.php';
 include_once './config/ConfigApp.php';

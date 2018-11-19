@@ -21,6 +21,7 @@ function GetNoticia(){
     $sentencia->execute();
 
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+    
 }
 function GetUnaNoticia($id_noticia){
     $sentencia = $this->db->prepare( "select * FROM noticias LEFT JOIN banda ON noticias.id_banda = banda.id_banda where id_noticia=?");
@@ -41,11 +42,18 @@ function GetNoticiasDeBanda($id_banda){
 function InsertNoticia($banda,$titulo,$descripcion){
   $sentencia = $this->db->prepare("insert INTO noticias(id_banda,titulo, descripcion) VALUES(?,?,?)");
   $sentencia->execute(array($banda,$titulo,$descripcion));
+  $lastId=$this->db->lastInsertId();
+  return $this->GetUnaNoticia($lastId);
 }
 
 function BorrarNoticia($idNoticia){
-  $sentencia = $this->db->prepare("delete from noticias where id_noticia=?");
-  $sentencia->execute(array($idNoticia));
+  $noticia=$this->GetUnaNoticia($idNoticia);
+  if(isset($noticia)){
+    $sentencia = $this->db->prepare("delete from noticias where id_noticia=?");
+    $sentencia->execute(array($idNoticia));
+    return $noticia;
+  }
+
 }
 function EditarNoticia($id_noticia,$id_banda,$titulo,$descripcion){
 

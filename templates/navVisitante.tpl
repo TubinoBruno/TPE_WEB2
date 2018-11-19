@@ -20,6 +20,9 @@
     <li class="nav-item">
       <a id="TextoBotonera" class="nav-link disabled" href="/Web2/TPE_WEB2/login">LOGIN</a>
     </li>
+    <li class="nav-item">
+      <a id="TextoBotonera" class="nav-link disabled" href="/Web2/TPE_WEB2/registrar">REGISTRAR</a>
+    </li>
 
 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-18 16:02:11
+/* Smarty version 3.1.33, created on 2018-11-18 23:56:53
   from '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/navVisitante.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc892631aa6d8_55870788',
+  'unifunc' => 'content_5bf1ee35266294_28147945',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd4db38e84393eb9c8f3ae8af949dd628de2b3868' => 
     array (
       0 => '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/navVisitante.tpl',
-      1 => 1539871213,
+      1 => 1542581798,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bc892631aa6d8_55870788 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf1ee35266294_28147945 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav id="mainNav" class="navbar navbar-expand-lg navbar-light ">
   <div class="navbar-brand js-scroll-trigger" href="#page-top">
     <a id="logo" class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -42,6 +42,9 @@ function content_5bc892631aa6d8_55870788 (Smarty_Internal_Template $_smarty_tpl)
     </li>
     <li class="nav-item">
       <a id="TextoBotonera" class="nav-link disabled" href="/Web2/TPE_WEB2/login">LOGIN</a>
+    </li>
+    <li class="nav-item">
+      <a id="TextoBotonera" class="nav-link disabled" href="/Web2/TPE_WEB2/registrar">REGISTRAR</a>
     </li>
 
 

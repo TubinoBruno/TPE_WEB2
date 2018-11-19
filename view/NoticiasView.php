@@ -20,7 +20,6 @@ class NoticiasView extends View
   }
   function MostrarNoticia( $Noticia){
     $this->smarty->assign('Noticia',$Noticia[0]);
-    json_encode($Noticia[0]);
     $this->smarty->assign('Titulo',"Mostrar Noticia" );
 
     $this->smarty->display('templates/mostrarnoticia.tpl');

@@ -2,7 +2,7 @@
 {include file = "navVisitante.tpl"}
   <body>
 
-    <div class="container">
+    <div id="noticias-container" class="container">
       <h1>{$Titulo}</h1>
 
       <ul class="list-group">

@@ -1,3 +1,4 @@
+
 <?php
 
 require_once  "./view/LoginView.php";
@@ -14,12 +15,35 @@ require_once  "./model/UsuarioModel.php";
       $this->model = new UsuarioModel();
     }
     function login(){
-      $this->view->mostarLogin();
+      $this->view->mostrarLogin();
     }
     function logout(){
       session_start();
       session_destroy();
       header(LOGIN);
+    }
+    function registrar(){
+      $this->view->mostrarRegistro();
+    }
+    function verificarRegistro(){
+      if(!empty($_POST['usuarioId']) && !empty($_POST['passwordId'])){
+      $user = $_POST["usuarioId"];
+      $pass = password_hash($_POST["passwordId"], PASSWORD_DEFAULT);
+      $dbUser = $this->model->getUser($user);
+      if(!isset($dbUser[0])){
+        $this->model->InsertUsuario($user,$pass);
+        $this->verificarLogin();
+        header(NOTICIAS);
+
+      }
+      else{
+        $this->view->mostrarRegistro("Usuario Existente");
+      }
+    }
+    else {
+      $this->view->mostrarRegistro("Complete todos los campos");
+    }
+
     }
 
     function verificarLogin(){
@@ -31,16 +55,13 @@ require_once  "./model/UsuarioModel.php";
           session_start();
           $_SESSION["usuario"]=$usuario;
           header(NOTICIAS);
-
         }
         else {
           $this->view->mostarLogin("Contraseña incorrecta");
-
         }
       }
       else {
         $this->view->mostarLogin("No existe el usuario");
-
       }
     }
 

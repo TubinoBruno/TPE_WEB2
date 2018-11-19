@@ -60,10 +60,7 @@ class BandasController extends SecuredController
   }
 
 
-  // function EditarAlumno($id_alumno){
-  // $alumno = $this->model->GetAlumno($id_alumno);
-  // $this->view->MostrarAlumno($alumno);
-  // }
+  
 }
 
  ?>

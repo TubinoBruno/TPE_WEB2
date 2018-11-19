@@ -29,17 +29,27 @@ class BandasModel {
   function InsertBanda($nombre,$estilo){
     $sentencia = $this->db->prepare("INSERT INTO banda(nombre, estilo) VALUES(?,?)");
     $sentencia->execute(array($nombre,$estilo));
+    $lastId=$this->db->lastInsertId();
+    return $this->GetUnaBanda($lastId);
+
+
+
   }
 
   function EliminarBanda($idBanda){
-    $sentencia = $this->db->prepare("delete from banda where id_banda=?");
-
-    $sentencia->execute([$idBanda]);
+    $banda=$this->GetUnaBanda($idBanda);
+    if(isset($banda)){
+      $sentencia = $this->db->prepare("delete from banda where id_banda=?");
+      $sentencia->execute([$idBanda]);
+      return $banda;
+    }
   }
   function actualizarBanda($idBanda,$nombre,$estilo){
     $sentencia = $this->db->prepare("UPDATE `banda` SET `nombre`=?,`estilo`=? WHERE  `id_banda`=?");
 
      $sentencia->execute([$nombre,$estilo,$idBanda]);
+     $banda=$this->GetUnaBanda($idBanda);
+     return $banda;
 
   }
 

@@ -37,6 +37,9 @@ class ConfigApp
     'verNoticia'=>'PublicController#MostrarNoticia',
     'filtrar'=>'PublicController#filtrarNoticia',
 
+    'registrar'=>'LoginController#registrar',
+    'verificarRegistro'=>'LoginController#verificarRegistro',
+
 
   ];
 }
