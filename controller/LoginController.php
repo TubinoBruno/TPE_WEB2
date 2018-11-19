@@ -52,9 +52,20 @@ require_once  "./model/UsuarioModel.php";
       $usuario_db = $this->model-> getUser($usuario);
       if (isset($usuario_db)) {
         if(password_verify($password,$usuario_db[0]["clave"])){
-          session_start();
-          $_SESSION["usuario"]=$usuario;
-          header(NOTICIAS);
+          if($usuario_db[0]["admin"]==1){
+            session_start();
+            $_SESSION["usuario"]=$usuario;
+            $_SESSION["id_usuario"]=$usuario_db[0]["id_usuario"]);
+
+            header(ADMIN);
+          }
+          else{
+            session_start();
+            $_SESSION["usuario"]=$usuario;
+            $_SESSION["id_usuario"]=$usuario_db[0]["id_usuario"]);
+            header(NOTICIAS);
+          }
+
         }
         else {
           $this->view->mostarLogin("Contraseña incorrecta");

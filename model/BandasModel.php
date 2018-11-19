@@ -26,7 +26,7 @@ class BandasModel {
       return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  function InsertBanda($nombre,$estilo){
+  function InsertBanda($nombre,$estilo,$url){
     $sentencia = $this->db->prepare("INSERT INTO banda(nombre, estilo) VALUES(?,?)");
     $sentencia->execute(array($nombre,$estilo));
     $lastId=$this->db->lastInsertId();
@@ -44,7 +44,7 @@ class BandasModel {
       return $banda;
     }
   }
-  function actualizarBanda($idBanda,$nombre,$estilo){
+  function actualizarBanda($idBanda,$nombre,$estilo,$url){
     $sentencia = $this->db->prepare("UPDATE `banda` SET `nombre`=?,`estilo`=? WHERE  `id_banda`=?");
 
      $sentencia->execute([$nombre,$estilo,$idBanda]);
