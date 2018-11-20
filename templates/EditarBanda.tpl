@@ -1,5 +1,5 @@
 {include file = "header.tpl"}
-{include file = "nav.tpl"}
+{include file = "navAdm.tpl"}
 <div class="container"><br>
   <h2>EDITAR BANDA</h2>
 

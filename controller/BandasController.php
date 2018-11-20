@@ -1,12 +1,16 @@
 <?php
-define('BANDAS', 'http://'.$_SERVER['SERVER_NAME']  .':'. $_SERVER['SERVER_PORT']. dirname($_SERVER['PHP_SELF']).'/bandas');
+define('BANDAS', 'http://'.$_SERVER['SERVER_NAME']  .':'. $_SERVER['SERVER_PORT']. dirname($_SERVER['PHP_SELF']).'/bandasAdm');
 require_once  "./view/BandasView.php";
+require_once  "./view/ViewAdmin.php";
+
 require_once  "./model/BandasModel.php";
 require_once  "SecuredController.php";
 
 class BandasController extends SecuredController
 {
   private $view;
+  private $viewAdmin;
+
   private $model;
   private $Titulo;
 
@@ -14,6 +18,7 @@ class BandasController extends SecuredController
   {
     parent::__construct();
     $this->view = new BandasView();
+    $this->viewAdmin = new ViewAdmin();
     $this->model = new BandasModel();
     $this->Titulo = "Listado de Bandas";
   }
@@ -22,7 +27,17 @@ class BandasController extends SecuredController
       $Banda = $this->model->GetBanda();
       $this->view->Mostrar($this->Titulo, $Banda);
   }
+  function mostrarBandasAdmin(){
+      $Banda = $this->model->GetBanda();
+      $this->viewAdmin->mostrarBandasAdmin($this->Titulo, $Banda);
+  }
   function mostrarBanda($params){
+    $idBanda =$params[0] ;
+    $Banda = $this->model->GetUnaBanda($idBanda);
+
+    $this->viewAdmin->MostrarBanda( $Banda);
+  }
+  function mostrarBandaUser($params){
     $idBanda =$params[0] ;
     $Banda = $this->model->GetUnaBanda($idBanda);
 
@@ -56,11 +71,11 @@ class BandasController extends SecuredController
   function FormularioEditarBanda($params){
     $Banda = $this->model->GetUnaBanda($params[0]);
     $titulo_editar="Editar Banda";
-    $this->view->EditarBanda($titulo_editar, $Banda[0]);
+    $this->viewAdmin->EditarBanda($titulo_editar, $Banda[0]);
   }
 
 
-  
+
 }
 
  ?>

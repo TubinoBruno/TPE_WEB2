@@ -12,6 +12,7 @@ include_once 'controller/BandasController.php';
 include_once 'controller/LoginController.php';
 include_once 'controller/SecuredController.php';
 include_once 'controller/PublicController.php';
+include_once 'controller/AdminController.php';
 
 
 function parseURL($url)

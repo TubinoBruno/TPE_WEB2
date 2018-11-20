@@ -1,31 +1,31 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-18 04:38:09
+/* Smarty version 3.1.33, created on 2018-11-19 21:41:59
   from '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/EditarBanda.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc7f211199094_60017757',
+  'unifunc' => 'content_5bf320176871a6_91369442',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8cfee0ba60c738dafb6eb6cc2b72941194dcc5a4' => 
     array (
       0 => '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/EditarBanda.tpl',
-      1 => 1539830227,
+      1 => 1542660117,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:header.tpl' => 1,
-    'file:nav.tpl' => 1,
+    'file:navAdm.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc7f211199094_60017757 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf320176871a6_91369442 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-$_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+$_smarty_tpl->_subTemplateRender("file:navAdm.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="container"><br>
   <h2>EDITAR BANDA</h2>

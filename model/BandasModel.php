@@ -26,7 +26,7 @@ class BandasModel {
       return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  function InsertBanda($nombre,$estilo,$url){
+  function InsertBanda($nombre,$estilo){
     $sentencia = $this->db->prepare("INSERT INTO banda(nombre, estilo) VALUES(?,?)");
     $sentencia->execute(array($nombre,$estilo));
     $lastId=$this->db->lastInsertId();

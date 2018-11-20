@@ -11,11 +11,10 @@
       <ul class="list-group">
         {foreach from=$Noticias item= noticia}
 
-            <li class="list-group-item"><p><b>TITULO:</b><a  href="mostrar_noticia/{$noticia['id_noticia']}">{$noticia['titulo']}</a><p>
+            <li class="list-group-item"><p><b>TITULO:</b><a  href="mostrarNoticiaUser/{$noticia['id_noticia']}">{$noticia['titulo']}</a><p>
               <b>DESCRIPCIÓN:</b>{$noticia['descripcion']}<p>
-                <p><b>BANDA:</b>  <a  href="mostrar_banda/{$noticia['id_banda']}">{$noticia['nombre']}</a><p>
-                  <a href="borrar/{$noticia['id_noticia']}"><br>BORRAR</a>
-                  <a href="modificar/{$noticia['id_noticia']}"><br>EDITAR</a></li>
+                <p><b>BANDA:</b>  <a  href="mostrarBandaUser/{$noticia['id_banda']}">{$noticia['nombre']}</a><p>
+
 
         {/foreach}
       </ul>

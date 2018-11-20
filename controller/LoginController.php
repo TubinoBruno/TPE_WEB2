@@ -22,6 +22,7 @@ require_once  "./model/UsuarioModel.php";
       session_destroy();
       header(LOGIN);
     }
+
     function registrar(){
       $this->view->mostrarRegistro();
     }
@@ -55,14 +56,14 @@ require_once  "./model/UsuarioModel.php";
           if($usuario_db[0]["admin"]==1){
             session_start();
             $_SESSION["usuario"]=$usuario;
-            $_SESSION["id_usuario"]=$usuario_db[0]["id_usuario"]);
+            $_SESSION["id_usuario"]=$usuario_db[0]["id_usuario"];
 
             header(ADMIN);
           }
           else{
             session_start();
             $_SESSION["usuario"]=$usuario;
-            $_SESSION["id_usuario"]=$usuario_db[0]["id_usuario"]);
+            $_SESSION["id_usuario"]=$usuario_db[0]["id_usuario"];
             header(NOTICIAS);
           }
 

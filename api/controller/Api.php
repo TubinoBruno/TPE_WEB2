@@ -1,6 +1,4 @@
 <?php
-require_once("BandasApiController.php");
-require_once("NoticiasApiController.php");
 require_once("ComentariosApiController.php");
 
 class Api{

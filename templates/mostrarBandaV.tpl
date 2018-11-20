@@ -9,7 +9,7 @@
 
             <li class="list-group-item"><p><b>NOMBRE:</b>{$Banda['nombre']}<p>
               <b>Estilo:</b>{$Banda['estilo']}<p>
-                  
+
                 </li>
 
     </div>

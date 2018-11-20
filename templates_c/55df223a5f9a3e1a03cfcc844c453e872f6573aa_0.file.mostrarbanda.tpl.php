@@ -1,31 +1,31 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-18 05:13:33
+/* Smarty version 3.1.33, created on 2018-11-20 01:51:38
   from '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/mostrarbanda.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc7fa5d9d3fa5_66265747',
+  'unifunc' => 'content_5bf35a9aa3ab44_42197179',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '55df223a5f9a3e1a03cfcc844c453e872f6573aa' => 
     array (
       0 => '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/mostrarbanda.tpl',
-      1 => 1539830882,
+      1 => 1542675061,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:header.tpl' => 1,
-    'file:nav.tpl' => 1,
+    'file:navAdm.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc7fa5d9d3fa5_66265747 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf35a9aa3ab44_42197179 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-$_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+$_smarty_tpl->_subTemplateRender("file:navAdm.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
   <body>
 

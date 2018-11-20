@@ -1,31 +1,31 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-18 04:37:20
+/* Smarty version 3.1.33, created on 2018-11-19 21:42:54
   from '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/EditarNoticia.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc7f1e0a90660_82552544',
+  'unifunc' => 'content_5bf3204e419ee9_71357111',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '79ad5cdafb3b8232b25e44315082c4db04cde9ae' => 
     array (
       0 => '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/EditarNoticia.tpl',
-      1 => 1539830232,
+      1 => 1542660057,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:header.tpl' => 1,
-    'file:nav.tpl' => 1,
+    'file:navAdm.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc7f1e0a90660_82552544 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf3204e419ee9_71357111 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-$_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+$_smarty_tpl->_subTemplateRender("file:navAdm.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
   <body>
 

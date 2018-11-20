@@ -12,17 +12,13 @@ class NoticiasView extends View
     $this->smarty->display('templates/noticias.tpl');
 
   }
-  function EditarNoticia($Titulo, $Noticias){
-    $this->smarty->assign('Titulo',$Titulo );
-    $this->smarty->assign('Noticias',$Noticias);
-    $this->smarty->display('templates/EditarNoticia.tpl');
 
-  }
   function MostrarNoticia( $Noticia){
     $this->smarty->assign('Noticia',$Noticia[0]);
+
     $this->smarty->assign('Titulo',"Mostrar Noticia" );
 
-    $this->smarty->display('templates/mostrarnoticia.tpl');
+    $this->smarty->display('templates/mostrarNoticiaU.tpl');
 
   }
   function MostrarNoticias($Noticia){

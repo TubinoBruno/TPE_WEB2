@@ -35,12 +35,7 @@ function GetComentarioDeBanda($id_banda){
 
 
 }
-function GetComentarioDeUser($id_user){
-  $sentencia = $this->db->prepare( "select * FROM comentarios LEFT JOIN usuario ON comentarios.id_usuario = usuario.id_usuario where comentarios.id_usuario = ?" );
-  $sentencia->execute([$id_user]);
-  return $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
-}
 
 
 function InsertComentario($comentario,$puntaje,$id_banda,$id_user){

@@ -18,7 +18,7 @@ class NovedadesView extends View{
 
   }
   function MostrarNoticias($Noticia){
-    $this->smarty->assign('Noticias',$Noticia);
+    $this->smarty->assign('Noticias',$Noticia[0]);
     $this->smarty->assign('Titulo',"Noticias Seleccionadas" );
     $this->smarty->display('templates/noticiasSeleccionadasV.tpl');
   }
