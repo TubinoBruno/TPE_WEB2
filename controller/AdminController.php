@@ -20,7 +20,8 @@ class AdminController extends SecuredController
   }
   function mostrarUsuarios(){
       $Usuarios = $this->model->GetUsuario();
-      $this->view->MostrarUsuarios($Usuarios);
+      $id_usuario=$_SESSION["id_usuario"];
+      $this->view->MostrarUsuarios($Usuarios,$id_usuario);
   }
   function borrarUsuario($param){
       $id_usuario=$param[0];

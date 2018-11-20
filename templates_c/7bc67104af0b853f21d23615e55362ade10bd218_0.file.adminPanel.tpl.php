@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-20 04:14:39
+/* Smarty version 3.1.33, created on 2018-11-20 13:27:52
   from '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/adminPanel.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf37c1f455549_03907426',
+  'unifunc' => 'content_5bf3fdc8bc9724_85171805',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7bc67104af0b853f21d23615e55362ade10bd218' => 
     array (
       0 => '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/adminPanel.tpl',
-      1 => 1542683608,
+      1 => 1542716866,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bf37c1f455549_03907426 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf3fdc8bc9724_85171805 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:navAdm.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -31,7 +31,6 @@ $_smarty_tpl->_subTemplateRender("file:navAdm.tpl", $_smarty_tpl->cache_id, $_sm
   <h2>PANEL</h2>
 
   <ul class="list-group">
-
     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Usuarios']->value, 'usuario');
 if ($_from !== null) {
@@ -44,8 +43,12 @@ foreach ($_from as $_smarty_tpl->tpl_vars['usuario']->value) {
              <?php } else { ?>
              <p>Usuario<p>
              <?php }?>
+             <?php if ($_smarty_tpl->tpl_vars['usuario']->value['id_usuario'] != $_smarty_tpl->tpl_vars['id_usuario']->value) {?>
               <a type="text" class="btn btn-enviar" href="borrarUsuario/<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
 " target="_self">Borrar Usuario</a>
+              <?php }?>
+              <?php if ($_smarty_tpl->tpl_vars['usuario']->value['id_usuario'] != $_smarty_tpl->tpl_vars['id_usuario']->value) {?>
+
               <?php if ($_smarty_tpl->tpl_vars['usuario']->value['admin'] == 1) {?>
               <a type="text" class="btn btn-enviar " href="quitarPermiso/<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
 " target="_self">Quitar Permiso</a>
@@ -53,6 +56,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['usuario']->value) {
               <a type="text" class="btn btn-enviar " href="darPermiso/<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
 " target="_self">Dar Permiso</a>
               <?php }?>
+              <?php }?>
+
+
            </li>
 
          <?php

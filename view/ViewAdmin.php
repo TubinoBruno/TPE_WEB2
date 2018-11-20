@@ -47,9 +47,10 @@ class ViewAdmin extends View
     $this->smarty->display('templates/mostrarbanda.tpl');
 
   }
-  function MostrarUsuarios( $Usuarios){
+  function MostrarUsuarios( $Usuarios,$id_usuario){
     $this->smarty->assign('Usuarios',$Usuarios);
-  
+    $this->smarty->assign('id_usuario',$id_usuario);
+
     $this->smarty->assign('Titulo',"Panel" );
     $this->smarty->display('templates/adminPanel.tpl');
 
