@@ -14,7 +14,7 @@
     </div>
     <div class="form-group">
       <label for="emailForm">Imagen</label>
-      <input type="text" class="form-control" id="imagenForm" name="imagenForm">
+      <input type="file" class="form-control" id="imagenForm" placeholder="" name="imagenForm" >
     </div>
 
     <button type="submit" class="btn btn-primary">Crear Perfil de Banda</button>
@@ -26,7 +26,10 @@
     {foreach from=$Bandas item= banda}
         <li class="list-group-item"><p>NOMBRE:<a href="mostrar_banda/{$banda['id_banda']}">{$banda['nombre']}</a><p>
           <p>ESTILO:{$banda['estilo']}<p>
-          <p>  IMAGEN:{$banda['imagen']}<a href="eliminar/{$banda['id_banda']}"><p>eliminar</a>
+            {if !$banda['url']==null}
+                  <img class="d-block w-100" src="images/{$banda['url']}" alt="">
+                  {/if}
+                <a href="eliminar/{$banda['id_banda']}"><p>eliminar</a>
           <a href="editar/{$banda['id_banda']}">editar</a></li>
     {/foreach}
   </ul>

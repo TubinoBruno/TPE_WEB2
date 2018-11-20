@@ -48,9 +48,11 @@ class BandasController extends SecuredController
   function InsertBanda(){
     $nombre = $_POST["nombreForm"];
     $estilo = $_POST["estiloForm"];
+    $imagen = $_POST["imagenForm"];
 
 
-    $this->model->InsertBanda($nombre,$estilo);
+
+    $this->model->InsertBanda($nombre,$estilo,$imagen);
     header("Location: ".BANDAS);
   }
 
@@ -61,9 +63,11 @@ class BandasController extends SecuredController
   function ActualizarBanda(){
     $nombre = $_POST["nombreForm"];
     $estilo = $_POST["estiloForm"];
+    $imagen = $_POST["imagenForm"];
+
     $id_banda = $_POST["id_bandaForm"];
 
-    $this->model->actualizarBanda($id_banda,$nombre,$estilo);
+    $this->model->actualizarBanda($id_banda,$nombre,$estilo,$imagen);
 
     header("Location: ".BANDAS);
 
@@ -73,8 +77,12 @@ class BandasController extends SecuredController
     $titulo_editar="Editar Banda";
     $this->viewAdmin->EditarBanda($titulo_editar, $Banda[0]);
   }
+function eliminarImagenBanda($params){
 
+  $Banda = $this->model->EliminarImagenBanda($params[0]);
 
+  header("Location: ".BANDAS);
+}
 
 }
 

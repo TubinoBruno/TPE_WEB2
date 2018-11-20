@@ -26,6 +26,7 @@ class ConfigApp
     'eliminar'=>'BandasController#EliminarBanda',
     'enlistar'=>'BandasController#InsertBanda',
     'editar'=>'BandasController#FormularioEditarBanda',
+    'eliminarImagen'=>'BandasController#eliminarImagenBanda',
     'actualizar'=>'BandasController#ActualizarBanda',
     'mostrar_banda'=>'BandasController#mostrarBanda',
     'bandaUser'=>'BandasController#mostrarBandaUser',

@@ -12,6 +12,10 @@
       <label for="emailForm">Estilo</label>
       <input type="text" class="form-control" id="estiloForm" name="estiloForm"  placeholder="{$Banda['estilo']}">
     </div>
+    <div class="form-group">
+      <label for="emailForm">Imagen</label>
+      <input type="file" class="form-control" id="imagenForm" placeholder="" name="imagenForm" >
+    </div>
     <input type="hidden" class="form-control" id="id_bandaForm" name="id_bandaForm" value="{$Banda['id_banda']}">
 
     <button type="submit" class="btn btn-primary" >Editar Perfil de Banda</button>

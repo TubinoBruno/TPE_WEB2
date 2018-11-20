@@ -15,7 +15,7 @@
     </li>
 
     <li class="nav-item">
-      <a id="TextoBotonera" class="nav-link disabled" href="/Web2/TPE_WEB2/bandas">BANDAS</a>
+      <a id="TextoBotonera" class="nav-link disabled" href="/Web2/TPE_WEB2/bandasUser">BANDAS</a>
     </li>
     <li class="nav-item">
       <a id="TextoBotonera" class="nav-link disabled" href="/Web2/TPE_WEB2/logout">LOGOUT</a>

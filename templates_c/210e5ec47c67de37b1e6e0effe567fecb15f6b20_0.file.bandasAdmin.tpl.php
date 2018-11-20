@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-20 02:00:59
+/* Smarty version 3.1.33, created on 2018-11-20 14:40:21
   from '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/bandasAdmin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf35ccbb5e416_47804420',
+  'unifunc' => 'content_5bf40ec5948963_17966463',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '210e5ec47c67de37b1e6e0effe567fecb15f6b20' => 
     array (
       0 => '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/bandasAdmin.tpl',
-      1 => 1542675657,
+      1 => 1542721219,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bf35ccbb5e416_47804420 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf40ec5948963_17966463 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:navAdm.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -41,7 +41,7 @@ $_smarty_tpl->_subTemplateRender("file:navAdm.tpl", $_smarty_tpl->cache_id, $_sm
     </div>
     <div class="form-group">
       <label for="emailForm">Imagen</label>
-      <input type="text" class="form-control" id="imagenForm" name="imagenForm">
+      <input type="file" class="form-control" id="imagenForm" placeholder="" name="imagenForm" >
     </div>
 
     <button type="submit" class="btn btn-primary">Crear Perfil de Banda</button>
@@ -61,8 +61,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['banda']->value) {
 </a><p>
           <p>ESTILO:<?php echo $_smarty_tpl->tpl_vars['banda']->value['estilo'];?>
 <p>
-          <p>  IMAGEN:<?php echo $_smarty_tpl->tpl_vars['banda']->value['imagen'];?>
-<a href="eliminar/<?php echo $_smarty_tpl->tpl_vars['banda']->value['id_banda'];?>
+            <?php if (!$_smarty_tpl->tpl_vars['banda']->value['url'] == null) {?>
+                  <img class="d-block w-100" src="images/<?php echo $_smarty_tpl->tpl_vars['banda']->value['url'];?>
+" alt="">
+                  <?php }?>
+                <a href="eliminar/<?php echo $_smarty_tpl->tpl_vars['banda']->value['id_banda'];?>
 "><p>eliminar</a>
           <a href="editar/<?php echo $_smarty_tpl->tpl_vars['banda']->value['id_banda'];?>
 ">editar</a></li>

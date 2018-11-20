@@ -26,9 +26,9 @@ class BandasModel {
       return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  function InsertBanda($nombre,$estilo){
-    $sentencia = $this->db->prepare("INSERT INTO banda(nombre, estilo) VALUES(?,?)");
-    $sentencia->execute(array($nombre,$estilo));
+  function InsertBanda($nombre,$estilo,$url){
+    $sentencia = $this->db->prepare("INSERT INTO banda(nombre, estilo,url) VALUES(?,?,?)");
+    $sentencia->execute(array($nombre,$estilo,$url));
     $lastId=$this->db->lastInsertId();
     return $this->GetUnaBanda($lastId);
 
@@ -44,10 +44,21 @@ class BandasModel {
       return $banda;
     }
   }
-  function actualizarBanda($idBanda,$nombre,$estilo,$url){
-    $sentencia = $this->db->prepare("UPDATE `banda` SET `nombre`=?,`estilo`=? WHERE  `id_banda`=?");
 
-     $sentencia->execute([$nombre,$estilo,$idBanda]);
+    function EliminarImagenBanda($idBanda){
+      $banda=$this->GetUnaBanda($idBanda);
+
+      if(isset($banda)){
+
+        $sentencia = $this->db->prepare("UPDATE `banda` SET `url`=null WHERE  `id_banda`=?");
+        $sentencia->execute([$idBanda]);
+        return $banda;
+      }
+    }
+  function actualizarBanda($idBanda,$nombre,$estilo,$url){
+    $sentencia = $this->db->prepare("UPDATE `banda` SET `nombre`=?,`estilo`=?,`url`=? WHERE  `id_banda`=?");
+
+     $sentencia->execute([$nombre,$estilo,$url,$idBanda]);
      $banda=$this->GetUnaBanda($idBanda);
      return $banda;
 
