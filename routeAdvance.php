@@ -14,7 +14,16 @@ include_once 'controller/SecuredController.php';
 include_once 'controller/PublicController.php';
 include_once 'controller/AdminController.php';
 
-
+function dB(){
+try{
+  $connection = new PDO('mysql:host=localhost;dbname=noticias_rock;charset=utf8', 'root', '');
+}catch(Exception $e){
+  $db = new PDO('mysql:host=localhost;charset=utf8', 'root', '');
+      $sql = file_get_contents('db/noticias_rock.sql');
+      $db->exec($sql);
+      }
+}
+dB();
 function parseURL($url)
 {
   $urlExploded = explode('/', $url);
