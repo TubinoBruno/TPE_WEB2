@@ -1,7 +1,7 @@
 <?php
 require_once "ApiSecured.php";
 require_once "./../model/ComentariosModel.php";
-class ApiController extends ApiSecured{
+class ComentariosApiController extends ApiSecured{
   private $model;
   function __construct(){
     parent::__construct();
@@ -21,7 +21,7 @@ class ApiController extends ApiSecured{
         return $this->json_response(null, 404);
       }
   }
-  function BorrarComentario($param = null){
+  function DeleteComentario($param = null){
     if(count($param) == 1){
         $id_comentario = $param[0];
         $response =  $this->model->BorrarComentario($id_comentario);

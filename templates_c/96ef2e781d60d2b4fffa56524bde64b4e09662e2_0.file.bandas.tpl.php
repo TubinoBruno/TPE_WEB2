@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-20 01:43:52
+/* Smarty version 3.1.33, created on 2018-11-21 00:49:39
   from '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/bandas.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf358c813ba52_62554517',
+  'unifunc' => 'content_5bf49d93674776_90179274',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96ef2e781d60d2b4fffa56524bde64b4e09662e2' => 
     array (
       0 => '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/bandas.tpl',
-      1 => 1542674627,
+      1 => 1542721798,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bf358c813ba52_62554517 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf49d93674776_90179274 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -43,6 +43,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['banda']->value) {
 </a><p>
           ESTILO:<?php echo $_smarty_tpl->tpl_vars['banda']->value['estilo'];?>
 <p>
+            <?php if (!$_smarty_tpl->tpl_vars['banda']->value['url'] == null) {?>
+                  <img class="d-block w-100" src="images/<?php echo $_smarty_tpl->tpl_vars['banda']->value['url'];?>
+" alt="">
+                  <?php }?>
           </li>
     <?php
 }

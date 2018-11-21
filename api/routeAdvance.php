@@ -1,13 +1,13 @@
 <?php
 
-
 define('RESOURCE', 0);
 define('PARAMS', 1);
 
-include_once 'config/ConfigApi.php';
-include_once 'controller/NoticiasApiController.php';
-
-
+require_once 'config/ConfigApi.php';
+require_once 'controller/ComentariosApiController.php';
+require_once 'controller/ComentariosApiControllerSec.php';
+require_once 'controller/ApiSecured.php';
+require_once 'controller/Api.php';
 
 function parseURL($url)
 {

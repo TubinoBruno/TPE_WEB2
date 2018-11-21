@@ -2,7 +2,7 @@
 require_once "Api.php";
 require_once "./../model/ComentariosModel.php";
 
-class ApiControllerSinSesion extends Api{
+class ComentariosApiControllerSec extends Api{
   private $model;
   function __construct(){
     parent::__construct();

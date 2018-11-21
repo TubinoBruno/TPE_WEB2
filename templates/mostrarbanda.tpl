@@ -17,6 +17,10 @@
                   <a href="eliminar/{$Banda['id_banda']}">BORRAR</a>
                   <a href="editar/{$Banda['id_banda']}">EDITAR</a>
                 </li>
+                <h3>Comentarios</h3>
+                    <div id="comentarios-container" class="mt-3 mb-3">
+
+                    </div>
 
     </div>
 

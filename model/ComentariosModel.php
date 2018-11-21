@@ -1,5 +1,5 @@
 <?php
-class NoticiasModel  {
+class ComentariosModel  {
   private $db;
 
   function __construct() {
@@ -12,7 +12,7 @@ return new PDO('mysql:host=localhost;'
   , 'root', '');
 }
 
-function GetComentario(){
+function GetComentarios(){
     $sentencia = $this->db->prepare( "select * FROM comentarios ");
 
     $sentencia->execute();
@@ -60,5 +60,5 @@ function EditarComentario($id_comentario,$comentario,$puntaje,$id_banda,$id_user
   $sentencia->execute([$comentario,$puntaje,$id_banda,$id_user,$id_comentario]);
 }
 
-
+}
  ?>

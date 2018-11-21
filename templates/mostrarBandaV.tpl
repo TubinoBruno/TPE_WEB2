@@ -13,6 +13,11 @@
                       <img class="d-block w-100" src="images/{$Banda['url']}" alt="">
                       {/if}
                 </li>
+                <h3>Comentarios</h3>
+                <div id="comentarios-container" class="mt-3 mb-3">
+
+                </div>
+
 
     </div>
 

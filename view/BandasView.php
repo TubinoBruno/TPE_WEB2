@@ -14,6 +14,8 @@ class BandasView extends View
   function MostrarBanda( $Banda){
     $this->smarty->assign('Banda',$Banda[0]);
     $this->smarty->assign('Titulo',"Noticias Banda" );
+    $this->smarty->assign('id_usuario',$_SESSION["id_usuario"] );
+
     $this->smarty->display('templates/mostrarBandaU.tpl');
 
   }
