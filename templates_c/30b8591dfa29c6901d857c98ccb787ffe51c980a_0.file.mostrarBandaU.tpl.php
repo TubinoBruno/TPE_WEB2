@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-21 00:52:15
+/* Smarty version 3.1.33, created on 2018-11-22 17:16:13
   from '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/mostrarBandaU.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf49e2f45feb3_86354248',
+  'unifunc' => 'content_5bf6d64d3ef934_34296676',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '30b8591dfa29c6901d857c98ccb787ffe51c980a' => 
     array (
       0 => '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/mostrarBandaU.tpl',
-      1 => 1542757928,
+      1 => 1542804725,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bf49e2f45feb3_86354248 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf6d64d3ef934_34296676 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -67,7 +67,7 @@ $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smart
 ">
 
                   </select>
-                  <button type="submit" class="btn btn-lg btn-enviarComentario">Comentar</button>
+                  <button type="submit" class="btn-enviarComentario">Comentar</button>
                 </form>
                 </div>
 

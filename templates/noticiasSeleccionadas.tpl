@@ -11,9 +11,9 @@
       <ul class="list-group">
         {foreach from=$Noticias item= noticia}
 
-            <li class="list-group-item"><p><b>TITULO:</b><a  href="mostrarNoticiaUser/{$noticia['id_noticia']}">{$noticia['titulo']}</a><p>
+            <li class="list-group-item"><p><b>TITULO:</b><a  href="noticiaUser/{$noticia['id_noticia']}">{$noticia['titulo']}</a><p>
               <b>DESCRIPCIÓN:</b>{$noticia['descripcion']}<p>
-                <p><b>BANDA:</b>  <a  href="mostrarBandaUser/{$noticia['id_banda']}">{$noticia['nombre']}</a><p>
+                <p><b>BANDA:</b>  <a  href="bandaUser/{$noticia['id_banda']}">{$noticia['nombre']}</a><p>
 
 
         {/foreach}

@@ -57,6 +57,7 @@ require_once  "./model/UsuarioModel.php";
             session_start();
             $_SESSION["usuario"]=$usuario;
             $_SESSION["id_usuario"]=$usuario_db[0]["id_usuario"];
+            $_SESSION["admin"]=$usuario_db[0]["admin"];
 
             header(ADMIN);
           }
@@ -64,16 +65,18 @@ require_once  "./model/UsuarioModel.php";
             session_start();
             $_SESSION["usuario"]=$usuario;
             $_SESSION["id_usuario"]=$usuario_db[0]["id_usuario"];
+            $_SESSION["admin"]=$usuario_db[0]["admin"];
+
             header(NOTICIAS);
           }
 
         }
         else {
-          $this->view->mostarLogin("Contraseña incorrecta");
+          $this->view->mostrarLogin("Contraseña incorrecta");
         }
       }
       else {
-        $this->view->mostarLogin("No existe el usuario");
+        $this->view->mostrarLogin("No existe el usuario");
       }
     }
 

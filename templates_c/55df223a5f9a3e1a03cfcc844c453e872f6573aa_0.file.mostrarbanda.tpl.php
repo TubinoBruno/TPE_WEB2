@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-20 15:35:17
+/* Smarty version 3.1.33, created on 2018-11-22 16:38:32
   from '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/mostrarbanda.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf41ba5dad7c7_03066409',
+  'unifunc' => 'content_5bf6cd7870c5b4_79404998',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '55df223a5f9a3e1a03cfcc844c453e872f6573aa' => 
     array (
       0 => '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/mostrarbanda.tpl',
-      1 => 1542724399,
+      1 => 1542901109,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bf41ba5dad7c7_03066409 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf6cd7870c5b4_79404998 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:navAdm.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -42,14 +42,20 @@ $_smarty_tpl->_subTemplateRender("file:navAdm.tpl", $_smarty_tpl->cache_id, $_sm
                       <img class="d-block w-100" src="images/<?php echo $_smarty_tpl->tpl_vars['Banda']->value['url'];?>
 " alt="">
                       <?php }?>
+                      <?php if (!isset($_smarty_tpl->tpl_vars['Banda']->value['url'])) {?>
                       <a href="eliminarImagen/<?php echo $_smarty_tpl->tpl_vars['Banda']->value['id_banda'];?>
 ">BORRAR IMAGEN</a>
+                      <?php }?>
 
                   <a href="eliminar/<?php echo $_smarty_tpl->tpl_vars['Banda']->value['id_banda'];?>
 ">BORRAR</a>
                   <a href="editar/<?php echo $_smarty_tpl->tpl_vars['Banda']->value['id_banda'];?>
 ">EDITAR</a>
                 </li>
+                <h3>Comentarios</h3>
+                    <div id="comentarios-container" class="mt-3 mb-3">
+
+                    </div>
 
     </div>
 

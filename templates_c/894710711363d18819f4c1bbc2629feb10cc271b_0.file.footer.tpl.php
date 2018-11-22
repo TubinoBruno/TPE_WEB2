@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-16 19:53:29
+/* Smarty version 3.1.33, created on 2018-11-22 16:33:48
   from '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bef1229d70558_55798684',
+  'unifunc' => 'content_5bf6cc5c7d5121_16828098',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '894710711363d18819f4c1bbc2629feb10cc271b' => 
     array (
       0 => '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/footer.tpl',
-      1 => 1541974296,
+      1 => 1542758825,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bef1229d70558_55798684 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf6cc5c7d5121_16828098 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  <br>
   <div id="pie">
       <p id="pie"> WEB2 2018<br>Trabajo Práctico Especial<br>ALUMNO: Bruno Tubino</p>
@@ -41,7 +41,13 @@ function content_5bef1229d70558_55798684 (Smarty_Internal_Template $_smarty_tpl)
 >
 
     <?php echo '<script'; ?>
- src="js/main.js" ><?php echo '</script'; ?>
+ src="js/mainUser.js" ><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/mainVisitante.js" ><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/mainAdmin.js" ><?php echo '</script'; ?>
 >
 <?php }
 }
