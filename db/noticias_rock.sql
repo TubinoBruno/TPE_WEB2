@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 18-10-2018 a las 05:29:38
+-- Tiempo de generación: 23-11-2018 a las 01:19:42
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.6.21
 
@@ -29,17 +29,42 @@ SET time_zone = "+00:00";
 CREATE TABLE `banda` (
   `id_banda` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
-  `estilo` varchar(50) NOT NULL
+  `estilo` varchar(50) NOT NULL,
+  `url` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `banda`
 --
 
-INSERT INTO `banda` (`id_banda`, `nombre`, `estilo`) VALUES
-(9, 'Sumo', 'Rock'),
-(10, 'Los Pericos', 'Reggae'),
-(11, 'Charly Garcia', 'Rock');
+INSERT INTO `banda` (`id_banda`, `nombre`, `estilo`, `url`) VALUES
+(10, 'sumo', 'rock', ''),
+(11, 'Charly Garcia', 'Rock', ''),
+(12, 'bigotete', 'aaa', ''),
+(13, 'bigotete', 'modo diablo', ''),
+(14, 'bigotete', 'aaa', 'descarga.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentarios`
+--
+
+CREATE TABLE `comentarios` (
+  `id_comentarios` int(50) NOT NULL,
+  `comentario` text NOT NULL,
+  `puntaje` int(1) NOT NULL,
+  `id_banda` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `comentarios`
+--
+
+INSERT INTO `comentarios` (`id_comentarios`, `comentario`, `puntaje`, `id_banda`, `id_usuario`) VALUES
+(4, 'algo1', 2, 10, 2),
+(5, 'algo1', 2, 10, 2);
 
 -- --------------------------------------------------------
 
@@ -59,9 +84,11 @@ CREATE TABLE `noticias` (
 --
 
 INSERT INTO `noticias` (`id_noticia`, `id_banda`, `titulo`, `descripcion`) VALUES
-(9, 9, 'Se cumplen 30 años de la muerte de Luca Prodan', 'Rebelde, polémico, frontal, talentoso y tantas otras cosas más… Si hay personas que marcan un antes y un después, Luca Prodan es sin dudas una de esas personas para nuestro rock. Hace 30 años su voz se apagaba para siempre, pero nacía la leyenda.'),
-(10, 9, 'PUBLICARON FOTO INÉDITA DE SUMO', 'UNA PERSONA COMPARTIÓ EN FACEBOOK UNA IMAGEN DE UN SHOW DEL GRUPO EN UNA DISCO DE BERISSO.\r\n'),
-(12, 11, 'Charly García, en el  Rex no hay mas entradas ', 'Nuevamente, como si se tratase de un ritual, las entradas para ver a Charly García y su Torre de Tesla se agotaron hoy en cuestión de minutos -tanto las que se vendían por Internet como las que estaban disponibles en la boletería del Gran Rex, donde tocará el martes. ');
+(2, 10, 'asdasd', 'oooooooooo'),
+(3, 10, '', ''),
+(4, 10, 'asdasd', 'oooooooooooooooo'),
+(5, 11, 'ahora si', 'estamos bien'),
+(6, 11, 'ahora si', 'estamos bien');
 
 -- --------------------------------------------------------
 
@@ -72,15 +99,20 @@ INSERT INTO `noticias` (`id_noticia`, `id_banda`, `titulo`, `descripcion`) VALUE
 CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL,
   `usuario` varchar(30) NOT NULL,
-  `clave` varchar(300) NOT NULL
+  `clave` varchar(300) NOT NULL,
+  `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `usuario`, `clave`) VALUES
-(2, 'pepe', '$2y$12$2yTYRpCjHp6XhGsME1qr.eipnJV4PsNDlXXEsKexyxWVQ9TDsxi1q');
+INSERT INTO `usuario` (`id_usuario`, `usuario`, `clave`, `admin`) VALUES
+(2, 'pepe', '$2y$12$2yTYRpCjHp6XhGsME1qr.eipnJV4PsNDlXXEsKexyxWVQ9TDsxi1q', 1),
+(10, 'gonzalo123', '$2y$10$BThtVQfHfH7gmdQpCdvxne9J6P50g27aLANbYEV.w02rFZwQXqZj2', 1),
+(11, 'pepito', '$2y$10$9KYsbvyzkWWQ7TunhJ.Cb.H.sVemD/becRuGjgE6nU1ucET9nB7Ce', 0),
+(12, 'pepitos', '$2y$10$RkhmVHm.CJzaOdL1ikc81uul30UqXaTokV5x8imX.cNF0puoHwfz.', 0),
+(13, 'tito', '$2y$10$SjtbBzQNQRL0oGgIYzu19.6f9o10B19w3ZliSocgwjECujZ.KU7DK', 0);
 
 --
 -- Índices para tablas volcadas
@@ -92,6 +124,14 @@ INSERT INTO `usuario` (`id_usuario`, `usuario`, `clave`) VALUES
 ALTER TABLE `banda`
   ADD PRIMARY KEY (`id_banda`),
   ADD KEY `id_banda` (`id_banda`);
+
+--
+-- Indices de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD PRIMARY KEY (`id_comentarios`),
+  ADD KEY `id_banda` (`id_banda`),
+  ADD KEY `id_usuario` (`id_usuario`);
 
 --
 -- Indices de la tabla `noticias`
@@ -119,20 +159,32 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `banda`
 --
 ALTER TABLE `banda`
-  MODIFY `id_banda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_banda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+--
+-- AUTO_INCREMENT de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  MODIFY `id_comentarios` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id_noticia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_noticia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD CONSTRAINT `comentarios_ibfk_1` FOREIGN KEY (`id_banda`) REFERENCES `banda` (`id_banda`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `comentarios_ibfk_2` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `noticias`
