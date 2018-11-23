@@ -39,17 +39,17 @@ function GetComentarioDeBanda($id_banda){
 
 
 function InsertComentario($comentario,$puntaje,$id_banda,$id_user){
-  $sentencia = $this->db->prepare("insert INTO comentarios(comentario,puntaje, id_banda,id_usuario) VALUES(?,?,?)");
+  $sentencia = $this->db->prepare("insert INTO comentarios(comentario,puntaje,id_banda,id_usuario) VALUES(?,?,?,?)");
   $sentencia->execute(array($comentario,$puntaje,$id_banda,$id_user));
   $lastId=$this->db->lastInsertId();
   return $this->GetComentario($lastId);
 }
 
 function BorrarComentario($idComentario){
-  $comentario=$this->GetComentario($lastId);
+  $comentario=$this->GetComentario($idComentario);
   if(isset($comentario)){
-    $sentencia = $this->db->prepare("delete from noticias where id_noticia=?");
-    $sentencia->execute(array($idNoticia));
+    $sentencia = $this->db->prepare("delete from comentarios where id_comentarios=?");
+    $sentencia->execute(array($idComentario));
     return $comentario;
   }
 

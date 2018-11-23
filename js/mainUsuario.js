@@ -8,13 +8,13 @@ fetch('js/templates/comentarios.handlebars')
     templateComentarios = Handlebars.compile(template); // compila y prepara el template
     let idBanda = document.querySelector("#id_bandaForm").value;
     getComentarios(idBanda);
-    timer = setInterval(function () { getComentarios(idBanda); }, 2000);
+    //timer = setInterval(function () { getComentarios(idBanda); }, 2000);
   });
 
 
 
 function getComentarios(idBanda) {
-  fetch("api/comentario/"+idBanda)
+  fetch("api/comentarios/"+idBanda)
     .then(response => response.json())
     .then(jsonComentarios => {
       mostrarComentarios(jsonComentarios);
@@ -30,26 +30,26 @@ function mostrarComentarios(jsonComentarios) {
   document.querySelector("#comentarios-container").innerHTML = html;
 }
 function enviarComentario() {
-  let idBanda = document.querySelector("#id_bandaForm").value;
+  let id_banda = document.querySelector("#id_bandaForm").value;
       let comentario = document.querySelector("#comentarioForm").value;
       let puntaje = document.querySelector("#puntajeForm").value;
-      let idUsuario = document.querySelector("#id_usuarioForm").value;
-
-      let encuesta = {
-          "IdBanda": idBanda,
-          "Comentario": comentario,
-          "Puntaje": puntaje,
-          "IdUsuario": idUsuario,
+      let id_usuario = document.querySelector("#id_usuarioForm").value;
+      echo id_usuario;
+      let comentarios = {
+          "comentario": comentario,
+          "puntaje": puntaje,
+          "id_banda": id_banda,
+          "id_usuario": id_usuario,
 
 
       }
 
-      fetch("api/comentario/", {
+      fetch("api/comentarios/", {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
           },
-          body: JSON.stringify(encuesta)
+          body: JSON.stringify(comentarios)
       }).then(response =>
           getComentarios(idBanda)
       );

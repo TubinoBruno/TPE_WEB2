@@ -5,8 +5,6 @@ define('PARAMS', 1);
 
 require_once 'config/ConfigApi.php';
 require_once 'controller/ComentariosApiController.php';
-require_once 'controller/ComentariosApiControllerSec.php';
-require_once 'controller/ApiSecured.php';
 require_once 'controller/Api.php';
 
 function parseURL($url)
@@ -25,10 +23,11 @@ if(isset($_GET['resource'])){
         $controller =  new $resource[0]();
         $metodo = $resource[1];
         if(isset($params) &&  $params != null){
-             $controller->$metodo($params);
+              echo $controller->$metodo($params);
         }
         else{
-            $controller->$metodo();
+             echo $controller->$metodo();
+
         }
     }
 }

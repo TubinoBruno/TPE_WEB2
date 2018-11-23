@@ -21,7 +21,7 @@
                 <h3>Nuevo Comentario</h3>
 
                 <div class="informaciongeneral encuesta mt-3 mb-3">
-                  <form method="post" action="comentar">
+                  <form method="post" action="">
 
                     <div class="form-group">
                       <label for="comentarioForm">Comentario</label>

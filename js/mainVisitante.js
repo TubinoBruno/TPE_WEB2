@@ -1,11 +1,11 @@
 
 'use strict'
-let templateComentarios;
+let templateComentariosVisit;
 
 fetch('js/templates/comentarios.handlebars')
   .then(response => response.text())
   .then(template => {
-    templateComentarios = Handlebars.compile(template); // compila y prepara el template
+    templateComentariosVisit = Handlebars.compile(template); // compila y prepara el template
     let idBanda = document.querySelector("#id_bandaForm").value;
     getComentarios(idBanda);
     timer = setInterval(function () { getComentarios(idBanda); }, 2000);
@@ -14,7 +14,7 @@ fetch('js/templates/comentarios.handlebars')
 
 
 function getComentarios(idBanda) {
-  fetch("api/comentario/"+idBanda)
+  fetch("api/comentarios/"+idBanda)
     .then(response => response.json())
     .then(jsonComentarios => {
       mostrarComentarios(jsonComentarios);
@@ -26,6 +26,6 @@ function mostrarComentarios(jsonComentarios) {
     comentarios: jsonComentarios
     //otra: "hola
   }
-  let html = templateComentarios(context);
+  let html = templateComentariosVisit(context);
   document.querySelector("#comentarios-container").innerHTML = html;
 }
