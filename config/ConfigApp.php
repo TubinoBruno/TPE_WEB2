@@ -10,47 +10,19 @@ class ConfigApp
   public static $ACTION = 'action';
   public static $PARAMS = 'params';
   public static $ACTIONS = [
-    ''=> 'PublicController#MostrarNovedades',
-    'noticias'=>'NoticiasController#MostrarNoticias',
+    ''=> 'PublicController#MostrarHome',
+    
+  
 
-    'borrar'=>'NoticiasController#BorrarNoticia',
-    'agregar'=>'NoticiasController#InsertNoticia',
-    'modificar'=>'NoticiasController#FormularioEditarNoticia',
-    'renovar'=>'NoticiasController#renovarNoticia',
-    'mostrar_noticia'=>'NoticiasController#mostrarNoticia',
-    'noticiaUser'=>'NoticiasController#mostrarNoticiaUser',
+    'home'=>'PublicController#MostrarHome',
+    'libres'=>'PublicController#MostrarLibres',
+    'ocupados'=>'PublicController#MostrarOcupados',
+    'verOcupados'=>'PublicController#verOcupados',
+    'verLibres'=>'PublicController#verLibres',
 
-    'buscar'=>'NoticiasController#buscarNoticia',
+    
 
-    'bandas'=>'BandasController#TraerLista',
-    'eliminar'=>'BandasController#EliminarBanda',
-    'enlistar'=>'BandasController#InsertBanda',
-    'editar'=>'BandasController#FormularioEditarBanda',
-    'eliminarImagen'=>'BandasController#eliminarImagenBanda',
-    'actualizar'=>'BandasController#ActualizarBanda',
-    'mostrar_banda'=>'BandasController#mostrarBanda',
-    'bandaUser'=>'BandasController#mostrarBandaUser',
-
-
-    'login'=>'LoginController#login',
-    'logout'=>'LoginController#logout',
-    'verificarLogin'=>'LoginController#verificarLogin',
-
-    'home'=>'PublicController#MostrarNovedades',
-    'bandasV'=>'PublicController#MostrarBandas',
-    'mostrarBanda'=>'PublicController#MostrarBanda',
-    'verNoticia'=>'PublicController#MostrarNoticia',
-    'filtrar'=>'PublicController#filtrarNoticia',
-
-    'registrar'=>'LoginController#registrar',
-    'verificarRegistro'=>'LoginController#verificarRegistro',
-    'admin'=>'NoticiasController#mostrarNoticiasAdmin',
-    'bandasAdm'=>'BandasController#mostrarBandasAdmin',
-
-    'adminPanel'=>'AdminController#mostrarUsuarios',
-    'borrarUsuario'=>'AdminController#borrarUsuario',
-    'darPermiso'=>'AdminController#insertarAdmin',
-    'quitarPermiso'=>'AdminController#quitarAdmin',
+    
 
 
 

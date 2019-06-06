@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-05 03:32:45
-  from '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/navVisitante.tpl' */
+/* Smarty version 3.1.33, created on 2019-06-05 22:11:00
+  from '/opt/lampp/htdocs/TPE_WEB2/templates/navVisitante.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cf71bbda73a38_38127978',
+  'unifunc' => 'content_5cf821d4b3ffc2_25418345',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'd4db38e84393eb9c8f3ae8af949dd628de2b3868' => 
+    'f91467c29ebd857f418bfc1b608d763478b4acac' => 
     array (
-      0 => '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/navVisitante.tpl',
+      0 => '/opt/lampp/htdocs/TPE_WEB2/templates/navVisitante.tpl',
       1 => 1559683973,
       2 => 'file',
     ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cf71bbda73a38_38127978 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cf821d4b3ffc2_25418345 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav id="mainNav" class="navbar navbar-expand-lg navbar-light ">
   <div class="navbar-brand js-scroll-trigger" href="#page-top">
     <a id="logo" class="navbar-brand js-scroll-trigger" href="#page-top">

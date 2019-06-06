@@ -1,32 +1,29 @@
 <?php
 class NovedadesView extends View{
-  function MostrarNovedades($Titulo, $Bandas,$Noticias){
+  function MostrarNovedades($Titulo){
     $this->smarty->assign('Titulo',$Titulo );
-    $this->smarty->assign('Bandas',$Bandas);
-    $this->smarty->assign('Noticias',$Noticias);
     $this->smarty->display('templates/home.tpl');
   }
-  function MostrarBandas($Titulo, $Bandas){
+  function MostrarOcupados($Titulo){
     $this->smarty->assign('Titulo',$Titulo );
-    $this->smarty->assign('Bandas',$Bandas);
-    $this->smarty->display('templates/bandasVisitante.tpl');
+    $this->smarty->display('templates/ocupados.tpl');
   }
-  function MostrarNoticia( $Noticia){
-    $this->smarty->assign('Noticia',$Noticia[0]);
-    $this->smarty->assign('Titulo',"Mostrar Noticia" );
-    $this->smarty->display('templates/mostrarNoticiaV.tpl');
+  function MostrarLibres($Titulo){
+    $this->smarty->assign('Titulo',$Titulo );
+    
+    $this->smarty->display('templates/libres.tpl');
+  }
+  function verLibres($Titulo,$libres){
+    $this->smarty->assign('Titulo',$Titulo );
+    $this->smarty->assign('Libres',$libres );
 
+    $this->smarty->display('templates/verLibres.tpl');
   }
-  function MostrarNoticias($Noticia){
-    $this->smarty->assign('Noticias',$Noticia[0]);
-    $this->smarty->assign('Titulo',"Noticias Seleccionadas" );
-    $this->smarty->display('templates/noticiasSeleccionadasV.tpl');
-  }
-  function MostrarBanda( $Banda){
-    $this->smarty->assign('Banda',$Banda[0]);
-    $this->smarty->assign('Titulo',"Mostrar Banda" );
-    $this->smarty->display('templates/mostrarBandaV.tpl');
+  function verOcupados($Titulo,$ocupados){
+    $this->smarty->assign('Titulo',$Titulo );
+    $this->smarty->assign('Ocupados',$ocupados );
 
+    $this->smarty->display('templates/verOcupados.tpl');
   }
 }
 

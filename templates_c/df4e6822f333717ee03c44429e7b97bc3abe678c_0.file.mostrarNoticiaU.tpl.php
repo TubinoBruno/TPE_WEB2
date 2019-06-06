@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-20 01:48:58
+/* Smarty version 3.1.33, created on 2019-06-05 04:04:00
   from '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/mostrarNoticiaU.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf359fa02f657_56890448',
+  'unifunc' => 'content_5cf7231029bf99_06023691',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'df4e6822f333717ee03c44429e7b97bc3abe678c' => 
     array (
       0 => '/opt/lampp/htdocs/Web2/TPE_WEB2/templates/mostrarNoticiaU.tpl',
-      1 => 1542674935,
+      1 => 1559683973,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bf359fa02f657_56890448 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cf7231029bf99_06023691 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

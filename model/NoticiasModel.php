@@ -10,56 +10,26 @@ class NoticiasModel  {
   }
 
 function Connect() {
-return new PDO('mysql:host=localhost;'
-  .'dbname=noticias_rock;charset=utf8'
-  , 'root', '');
+return new PDO('pgsql:host=dbases.exa.unicen.edu.ar;port=5432;dbname=cursada;user=unc_249018;password=249018');
 }
 
-function GetNoticia(){
-    $sentencia = $this->db->prepare( "select * FROM noticias LEFT JOIN banda ON noticias.id_banda = banda.id_banda");
+function GetOcupados($ocupado){
+    $sentencia = $this->db->prepare( "select * FROM fila ");
 
     $sentencia->execute();
 
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
     
 }
-function GetUnaNoticia($id_noticia){
-    $sentencia = $this->db->prepare( "select * FROM noticias LEFT JOIN banda ON noticias.id_banda = banda.id_banda where id_noticia=?");
+function GetLibres($libre){
+    $sentencia = $this->db->prepare( "select ");
 
     $sentencia->execute([$id_noticia]);
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 
 }
-function GetNoticiasDeBanda($id_banda){
-  $sentencia = $this->db->prepare( "select * FROM noticias LEFT JOIN banda ON noticias.id_banda = banda.id_banda where noticias.id_banda = ?" );
-  $sentencia->execute([$id_banda]);
-  return $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
-}
-
-
-function InsertNoticia($banda,$titulo,$descripcion){
-  $sentencia = $this->db->prepare("insert INTO noticias(id_banda,titulo, descripcion) VALUES(?,?,?)");
-  $sentencia->execute(array($banda,$titulo,$descripcion));
-  $lastId=$this->db->lastInsertId();
-  return $this->GetUnaNoticia($lastId);
-}
-
-function BorrarNoticia($idNoticia){
-  $noticia=$this->GetUnaNoticia($idNoticia);
-  if(isset($noticia)){
-    $sentencia = $this->db->prepare("delete from noticias where id_noticia=?");
-    $sentencia->execute(array($idNoticia));
-    return $noticia;
-  }
-
-}
-function EditarNoticia($id_noticia,$id_banda,$titulo,$descripcion){
-
-  $sentencia = $this->db->prepare("UPDATE `noticias` SET `id_banda`=?,`titulo`=?,`descripcion`=? WHERE `id_noticia`=?");
-  $sentencia->execute([$id_banda,$titulo,$descripcion, $id_noticia]);
-}
 
 
 }

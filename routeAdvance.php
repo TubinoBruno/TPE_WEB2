@@ -7,21 +7,15 @@ define('PARAMS', 1);
 include_once './view/View.php';
 //include_once './model/Model.php';
 include_once './config/ConfigApp.php';
-include_once 'controller/NoticiasController.php';
-include_once 'controller/BandasController.php';
-include_once 'controller/LoginController.php';
-include_once 'controller/SecuredController.php';
+
 include_once 'controller/PublicController.php';
-include_once 'controller/AdminController.php';
 
 function dB(){
-try{
-  $connection = new PDO('mysql:host=localhost;dbname=noticias_rock;charset=utf8', 'root', '');
-}catch(Exception $e){
-  $db = new PDO('mysql:host=localhost;charset=utf8', 'root', '');
-      $sql = file_get_contents('db/noticias_rock.sql');
-      $db->exec($sql);
-      }
+
+  
+
+  $connection = new PDO('pgsql:host=dbases.exa.unicen.edu.ar;port=5432;dbname=cursada;user=unc_249018;password=249018');
+
 }
 dB();
 function parseURL($url)

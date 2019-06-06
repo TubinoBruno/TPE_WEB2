@@ -24,7 +24,6 @@
 .alineacion {
   align-content: center;
 }
-#logo {
+.center {
   text-align: center;
-  background-color: inherit;
   }

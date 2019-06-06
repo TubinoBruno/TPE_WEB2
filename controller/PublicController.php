@@ -1,7 +1,6 @@
 <?php
 require_once  "./view/NovedadesView.php";
 require_once  "./model/NoticiasModel.php";
-require_once  "./model/BandasModel.php";
 
   class PublicController{
     private $view;
@@ -13,41 +12,34 @@ require_once  "./model/BandasModel.php";
     {
     $this->view = new NovedadesView();
     $this->model = new NoticiasModel();
-    $this->model_band = new BandasModel();
-    $this->titulo="Novedades";
-    $this->titulo_b="Novedades";
+    $this->titulo="TRABAJO ESPECIAL 2019";
+    $this->titulo1="LIBRES";
+    $this->titulo2="OCUPADOS";
 
   }
-function mostrarNovedades(){
-  $Noticias = $this->model->GetNoticia();
-  $Bandas = $this->model_band->GetBanda();
-  $this->view->MostrarNovedades($this->titulo,$Bandas,$Noticias);
+function MostrarHome(){
+  $this->view->MostrarNovedades($this->titulo);
   }
-  function mostrarBandas(){
-    $Bandas = $this->model_band->GetBanda();
-    $this->view->MostrarBandas($this->titulo_b,$Bandas);
-
+  function MostrarLibres(){
+    $this->view->MostrarLibres($this->titulo1);
     }
-    function mostrarNoticia($params){
-      $idNoticia =$params[0] ;
-      $Noticia = $this->model->GetUnaNoticia($idNoticia);
+    function MostrarOcupados(){
+      $this->view->MostrarOcupados($this->titulo2);
+      }
+      function verOcupados(){
+        $ocupado =$_POST["verOcupados"];
 
-      $this->view->MostrarNoticia( $Noticia);
-    }
-    function mostrarBanda($params){
-      $idBanda =$params[0] ;
-      $Banda = $this->model_band->GetUnaBanda($idBanda);
+        $ocupados = $this->model->GetOcupados($ocupado);
+        $this->view->verOcupados($this->titulo2,$ocupados );
+        }
+        function verLibres(){
+          $libre =$_REQUEST["verLibres"];
+          $libres = $this->model->GetLibres($libre);
 
-      $this->view->MostrarBanda( $Banda);
+          $this->view->verLibres($this->titulo2,$libres);
 
-    }
-    function filtrarNoticia(){
-      $idNoticia =$_POST['bandasForm'];
-      $Noticia = $this->model->GetNoticiasDeBanda($idNoticia);
-
-      $this->view->MostrarNoticias( $Noticia);
-    }
-
+          
+          }
 }
 
 
